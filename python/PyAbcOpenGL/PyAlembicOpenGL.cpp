@@ -35,7 +35,7 @@
 //-*****************************************************************************
 
 #include "Foundation.h"
-#include <AbcOpenGL/All.h>
+#include <Alembic/AbcOpenGL/All.h>
 
 using namespace boost::python;
 

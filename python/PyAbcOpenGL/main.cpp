@@ -43,8 +43,8 @@ void register_opengl();
 BOOST_PYTHON_MODULE( alembicgl )
 {
     docstring_options doc_options( true, true, false );
-    
-    handle<> imath( PyImport_ImportModule( "imath" ) );
+
+    handle<> alembic( PyImport_ImportModule( "alembic" ) );
     if( PyErr_Occurred() ) throw_error_already_set();
 
     object package = scope();

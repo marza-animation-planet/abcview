@@ -37,7 +37,7 @@
 #define PyAbcOpenGL_Foundation_h_
 
 #include <Python.h>
-#include <AbcOpenGL/All.h>
+#include <Alembic/AbcOpenGL/All.h>
 #include <string>
 
 // if Alembic::Util::shared_ptr resolves to boost::shared_ptr then we
