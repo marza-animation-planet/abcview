@@ -37,11 +37,11 @@
 #ifndef _AbcOpenGL_Export_h_
 #define _AbcOpenGL_Export_h_
 
-#if defined(ALEMBIC_DLL)
+#if defined(ABC_OPENGL_DLL)
     #if defined(ABC_OPENGL_EXPORTS)
-    #define ABC_OPENGL_EXPORT __declspec(dllexport)
+        #define ABC_OPENGL_EXPORT __declspec(dllexport)
     #else
-    #define ABC_OPENGL_EXPORT __declspec(dllimport)
+        #define ABC_OPENGL_EXPORT __declspec(dllimport)
     #endif
     #define ABC_OPENGL_EXPORT_CONST
 #else
