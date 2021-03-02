@@ -40,9 +40,12 @@
 #include <Alembic/AbcOpenGL/All.h>
 #include <string>
 
-// if Alembic::Util::shared_ptr resolves to boost::shared_ptr then we
-// don't need this since it's defined elsewhere
-#ifndef ALEMBIC_LIB_USES_BOOST
+#include <boost/version.hpp>
+
+// if Alembic uses shared_ptr from boost, then we don't need this function because boost provides it
+// if Alembic uses shared_ptr from std, then we don't need this function because boost provides it since 1.53
+// if Alembic uses shared_ptr from tr1, then we do need this function
+#if defined(ALEMBIC_LIB_USES_TR1) || (BOOST_VERSION < 105300 && !defined(ALEMBIC_LIB_USES_BOOST))
 namespace boost
 {
 
